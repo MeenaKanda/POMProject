@@ -20,6 +20,8 @@ import com.qa.opencart.exception.FrameworkException;
 
 public class DriverFactory {
 	
+	int i = 0;
+	
 	public WebDriver driver;
 	public Properties prop;  //make it public so other class can use it.
 	public OptionsManager optionsManager;
@@ -63,7 +65,7 @@ public class DriverFactory {
 			tlDriver.set(new EdgeDriver(optionsManager.getEdgeOptions()));
 		}
 		else {
-			System.out.println("plz pass the right browser ... " + browserName);
+			System.out.println("plz pass the right browser name ...... " + browserName);
 		}
 		
 /*		driver.manage().deleteAllCookies();
