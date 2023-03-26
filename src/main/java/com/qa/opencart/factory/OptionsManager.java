@@ -20,6 +20,15 @@ public class OptionsManager {     // this class maintain all the browser
 	public ChromeOptions getChromeOptions() {
 		co = new ChromeOptions();
 		co.addArguments("--remote-allow-origins=*");
+		
+		if(Boolean.parseBoolean(prop.getProperty("remote"))) {
+			co.setBrowserVersion(prop.getProperty("browserversion"));
+			co.setCapability("browsername", "chrome");
+			co.setCapability("enableVNC", true);
+			co.setCapability("name", prop.getProperty("testcasename"));   //name is got from selenoid-ui  // /* How to add test badge */// put("name", "Test badge...");
+		                                                                                                                 
+		}
+		
 		if(Boolean.parseBoolean(prop.getProperty("headless").trim())) {
 			System.out.println("=========Running chrome in headless===============");
 			co.addArguments("--headless");
@@ -31,6 +40,15 @@ public class OptionsManager {     // this class maintain all the browser
 	
 	public FirefoxOptions getFirefoxOptions() {
 		fo = new FirefoxOptions();
+		fo.addArguments("--remote-allow-origins=*");
+		
+		if(Boolean.parseBoolean(prop.getProperty("remote"))) {
+			fo.setBrowserVersion(prop.getProperty("browserversion"));
+			fo.setCapability("browsername", "firefox");
+			fo.setCapability("enableVNC", true);  //in order to visualize test case running or not
+		}
+		
+		
 		if(Boolean.parseBoolean(prop.getProperty("headless").trim())) {
 			System.out.println("=========Running Firefox in headless===============");
 			fo.addArguments("--headless");

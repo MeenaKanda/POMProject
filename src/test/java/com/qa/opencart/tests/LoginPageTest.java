@@ -14,6 +14,7 @@ import io.qameta.allure.Story;
 
 @Epic("Epic - 100: desigh login for open cart app")
 @Story("US-Login: 101: design login page features for open cart")
+
 public class LoginPageTest extends BaseTest {
 	
 	@Severity(SeverityLevel.TRIVIAL)

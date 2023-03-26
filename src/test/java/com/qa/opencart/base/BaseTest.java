@@ -5,6 +5,7 @@ import java.util.Properties;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.asserts.SoftAssert;
 
 import com.qa.opencart.factory.DriverFactory;
@@ -28,10 +29,20 @@ public class BaseTest {
 	
 	protected SoftAssert softAssert;
 	
+	@Parameters({"browser", "browserversion", "testcasename"})
 	@BeforeTest
-	public void setup() {
+	public void setup(String browserName, String browserVersion, String testCaseName) {
 		df = new DriverFactory();
 		prop = df.initProp();  //return prop which have all the properties of file in key and value format
+		
+		    if(browserName!=null) {
+		    	prop.setProperty("browser",browserName);
+		    	prop.setProperty("browserversion", browserVersion);
+		    	prop.setProperty("testcasename", testCaseName);
+		    }
+		  
+		
+		
 		driver = df.initDriver(prop);
 	//	driver = df.initDriver("chrome");    //initDriver() returns driver
 		loginPage = new LoginPage(driver);   // here we create LoginPage object in BaseTest so unnecessarily don't need to create object in LoginBaseTest.
