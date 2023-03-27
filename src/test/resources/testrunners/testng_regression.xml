@@ -31,23 +31,23 @@
 	
 
 
-	<test name="Accounts Page Test_chrome_90.0">
+<!--	<test name="Accounts Page Test_chrome_90.0">
 	  <parameter name="browser" value="chrome" />
 	   <parameter name="browserversion" value="90.0" />
 	   <parameter name="testcasename" value="Accounts Page Test" />
 		<classes>
 			<class name="com.qa.opencart.tests.AccountsPageTest" />
 		</classes>
-	</test>
+	</test>  -->
 	
-<!-- 	<test name="Login Page Test_firefox_57.0"> 
+ 	<test name="Login Page Test_firefox_57.0"> 
 	  <parameter name="browser" value="firefox" />
 	  <parameter name="browserversion" value="57.0" />
 	  <parameter name="testcasename" value="Login Page Test" />
 		<classes>
 			<class name="com.qa.opencart.tests.LoginPageTest" />
 		</classes>
-	</test>  -->
+	</test>  
 	
 
 
