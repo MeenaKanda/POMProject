@@ -42,7 +42,7 @@ public class LoginPage {
 	public String getLoginPageTitle() {
 	//	String title = driver.getTitle();
 		String title = eleUtil.waitForTitleAndFetch(AppConstants.DEFAULT_SHORT_TIME_OUT, AppConstants.LOGIN_PAGE_TITLE_VALUE);
-		System.out.println("Login page title : " + title);
+		System.out.println("Login page title is : " + title);
 		return title;  
 	}
 	
@@ -50,7 +50,7 @@ public class LoginPage {
 	public String getLoginPageURL() {
 	//	String url = driver.getCurrentUrl();
 		String url = eleUtil.waitForURLContainsAndFetch(AppConstants.DEFAULT_SHORT_TIME_OUT, AppConstants.LOGIN_PAGE_URL_FRACTION);
-		System.out.println("Login page url : " + url);
+		System.out.println("Login page url is  : " + url);
 		return url;
 	}
 	@Step(" .... getting the forgot pwd link....")
