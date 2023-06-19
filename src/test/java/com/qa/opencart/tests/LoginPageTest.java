@@ -1,7 +1,9 @@
 package com.qa.opencart.tests;
 
+import org.apache.log4j.MDC;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.testng.log4testng.Logger;
 
 import com.qa.opencart.base.BaseTest;
 import com.qa.opencart.constants.AppConstants;
@@ -17,11 +19,17 @@ import io.qameta.allure.Story;
 
 public class LoginPageTest extends BaseTest {
 	
+	private final Logger logger = Logger.getLogger(LoginPageTest.class);
+	
 	@Severity(SeverityLevel.TRIVIAL)
 	@Description("...checking the title of the page.... tester:Meena")
 	@Test(priority = 1)
 	public void loginPageTitleTest() {
+		MDC.put("testClassName", this.getClass().getSimpleName());
+		logger.info("This is a log message form loginPageTitleTest");
+		
 		String actualTitle = loginPage.getLoginPageTitle();
+		logger.info("actual login page title: " +actualTitle);
 		Assert.assertEquals(actualTitle, AppConstants.LOGIN_PAGE_TITLE_VALUE);
 	}
 	
@@ -29,6 +37,9 @@ public class LoginPageTest extends BaseTest {
 	@Description("...checking the url of the page.... tester:Meena")
 	@Test(priority = 2)
 	public void loginPageUrlTest() {
+		MDC.put("testClassName", this.getClass().getSimpleName());
+		logger.info("This is a log message form loginPageURLTest");
+		
 		String actualURL = loginPage.getLoginPageURL();
 		Assert.assertTrue(actualURL.contains(AppConstants.LOGIN_PAGE_URL_FRACTION));
 		//Assert.assertTrue(false);
@@ -38,6 +49,10 @@ public class LoginPageTest extends BaseTest {
 	@Description("...checking forgot pwd link exist... tester:Meena")
 	@Test(priority = 3)
 	public void forgotPwdLinkExist() {
+		MDC.put("testClassName", this.getClass().getSimpleName());
+		logger.info("This is a log message form forgotPwdLinkExistTest");
+		
+		
 		Assert.assertTrue(loginPage.isForgotPwdLinkExist());
 	}
 	
@@ -89,3 +104,8 @@ public class LoginPageTest extends BaseTest {
 
 //constant -> we keep application specific value
 //browser is framework specific value so maintain in config properties.
+
+//logger.err
+//logger.fatal
+//logger.info
+//logger.war

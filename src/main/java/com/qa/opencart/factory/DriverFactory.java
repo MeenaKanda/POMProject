@@ -47,6 +47,7 @@ public class DriverFactory {
 		
 		highlight  = prop.getProperty("highlight").trim();
 		String browserName = prop.getProperty("browser").toLowerCase().trim();  //key is browser and getProperty()  give respective value
+//		String browserName = System.getProperty("browser");  // passs in maven commant 
 		
 		System.out.println("browser name is : " + browserName);
 		
@@ -212,7 +213,7 @@ public class DriverFactory {
 		prop = new Properties();
 	 	FileInputStream ip = null;
 		
-		String envName = System.getProperty("env");  //read the environment variable with the help of System class
+		String envName = System.getProperty("env");  //read the environment variable with the help of System class  //this env we can pass from command line terminal mvn clean install -Denv ="stage" //or send env from ecllpse
 		System.out.println("Running test cases on Env: " + envName);
 		
 		try {
@@ -238,7 +239,7 @@ public class DriverFactory {
 			default:
 			{
 				System.out.println("....Wrong env is passed ....No need to run the test cases....");
-				throw new FrameworkException("WRONG ENV IS  PASSED.....");
+				throw new FrameworkException("WRONG ENV IS  PASSED.....");   // throw own exception if wrong env is passed
 			//	break; //break not needed here because throw keyword
 			}
 			}

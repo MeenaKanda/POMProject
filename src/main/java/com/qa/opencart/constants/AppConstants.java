@@ -24,3 +24,8 @@ public class AppConstants {
 	//**********************Sheet Name **********************//
 	public static final String REGISTER_SHEET_NAME = "register";
 }
+
+
+//testData = excel/database
+//constants= final,static
+//env data = properties

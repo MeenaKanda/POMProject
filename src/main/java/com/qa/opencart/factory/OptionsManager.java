@@ -19,7 +19,7 @@ public class OptionsManager {     // this class maintain all the browser
 	
 	public ChromeOptions getChromeOptions() {
 		co = new ChromeOptions();
-		co.addArguments("--remote-allow-origins=*");
+//		co.addArguments("--remote-allow-origins=*");
 		
 		if(Boolean.parseBoolean(prop.getProperty("remote"))) {
 			co.setBrowserVersion(prop.getProperty("browserversion"));
@@ -39,8 +39,9 @@ public class OptionsManager {     // this class maintain all the browser
 	
 	
 	public FirefoxOptions getFirefoxOptions() {
-		fo = new FirefoxOptions();
-		fo.addArguments("--remote-allow-origins=*");
+		System.out.println("firefox options");
+		fo = new FirefoxOptions(); 
+		
 		
 		if(Boolean.parseBoolean(prop.getProperty("remote"))) {
 			fo.setBrowserVersion(prop.getProperty("browserversion"));

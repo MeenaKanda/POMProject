@@ -3,15 +3,19 @@ package com.qa.opencart.tests;
 import java.util.Arrays;
 import java.util.List;
 
+import org.apache.log4j.MDC;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import org.testng.log4testng.Logger;
 
 import com.qa.opencart.base.BaseTest;
 import com.qa.opencart.constants.AppConstants;
 
 public class AccountsPageTest extends BaseTest{
+	
+	private final Logger logger = Logger.getLogger(AccountsPageTest.class);
 	
     @BeforeClass
     public void accPageSetup() {
@@ -20,12 +24,18 @@ public class AccountsPageTest extends BaseTest{
     
     @Test
     public void accPageTitleTest() {
+    	MDC.put("testClassName", this.getClass().getSimpleName());
+		logger.info("This is a log message form AccountsPageTitleTest");
+		
     	String actTitle = accPage.getAccPageTitle();
     	Assert.assertEquals(actTitle, AppConstants.ACCOUNTS_PAGE_TITLE_VALUE);
     }
     
     @Test
     public void accPageURLTest() {
+    	MDC.put("testClassName", this.getClass().getSimpleName());
+		logger.info("This is a log message form AccountsPageURLTest");
+		
     	String actURL = accPage.getAccPageURL();
     	Assert.assertTrue(actURL.contains(AppConstants.ACCOUNTS_PAGE_URL_FRACTION));
     }
