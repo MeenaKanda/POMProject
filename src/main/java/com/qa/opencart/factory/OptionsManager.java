@@ -47,6 +47,7 @@ public class OptionsManager {     // this class maintain all the browser
 			fo.setBrowserVersion(prop.getProperty("browserversion"));
 			fo.setCapability("browsername", "firefox");
 			fo.setCapability("enableVNC", true);  //in order to visualize test case running or not
+			fo.setCapability("name", prop.getProperty("testcasename"));
 		}
 		
 		
