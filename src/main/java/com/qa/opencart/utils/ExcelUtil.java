@@ -55,10 +55,3 @@ public class ExcelUtil {
 
 }
 
-
-//WorkBookFactory --> from apoci poi
-//Workbook from --> apoci poi
-//create() method return Workbook
-//getSheet() return Sheet
-//in any webtable column count are same for all rows
-//sheet.getrow(0)--> first row index startr with 0 

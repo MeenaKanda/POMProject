@@ -91,21 +91,3 @@ public class LoginPageTest extends BaseTest {
 }
 
 
-//Test should not have any automation API which means automation method like no click method ,no sendkeys methods,gettext,
-//isDisplayed() , driver = new ChromeDriver()
-//In Test->Test method--> should not have any selenium method.purpose of Test is that call the respective page method and get some return and validate.
-
-//If you have WebDriver APIs in your test methods, You are doing it Wrong --- Simon Steward
-
-//Page Objects are a classical example of encapsulation.They hide the details of the UI structure and widgetry from other 
-//components(the tests).It is a goood design principle to look for situations like as you develop
-
-//POM --> for Web Application and mobile Application
-
-//constant -> we keep application specific value
-//browser is framework specific value so maintain in config properties.
-
-//logger.err
-//logger.fatal
-//logger.info
-//logger.war

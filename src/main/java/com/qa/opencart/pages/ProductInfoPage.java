@@ -48,8 +48,7 @@ public class ProductInfoPage {
 	    return imagesCount;
 	}
 	
-	
-	//my work
+
 	public int getDescriptionCount() {
 		List<WebElement> desElements = eleUtil.waitForElementsVisible(productDescriptions, AppConstants.DEFAULT_MEDIUM_TIME_OUT);
 		int desEleCount = desElements.size();
@@ -141,4 +140,4 @@ public class ProductInfoPage {
 }
 
 
-//  \n-> means for new line
+

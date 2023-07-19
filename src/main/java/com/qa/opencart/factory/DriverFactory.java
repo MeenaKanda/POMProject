@@ -280,50 +280,6 @@ public class DriverFactory {
 
 
 
-//TakeScreenshot -> is an interface in selenium ->
-//getScrrenshotAs(OUtputType.File) ->it capture the screenshot and store it in the specified location.
-//System.getProperty("user.dir")-> user.dir is current user/project directry.
-//System.getProperty("user.dir")+"/screenshot" ==> create screenshot folder under particular project
-
-
-
-//don't use static keyword. multiple thread going to use this method. if it it is static
-//this method can be used by one thread at a time, so multiple thread can not use this method at a time.
-//so don't make it static.
-
-//Properties -> is a class from java 
-//FileInputStream -> is a class from java and is used to interact with non java files(.xl or .properties file like non-java file)
-//FileInputStream make connection with config.Properties
-
-
-//"./src/test/resources/config/config.properties"
-//./   ---=>mean go to current project directory(NOv2022PomSeries)
-
-//FileInputStream ip = new FileInputStream("./src/test/resources/config/config.properties");  --> if the file is not available/not able to read it throw FileNOtFountexception.
-//so we put it in try catch block. 
-
-
-//prop.load(ip); while loading Propeties also if any exception(IOException) may come .so we put in try catch block.
-//in Properties OBject all the values are stored in key and value format.
-
-
-//The properties object contains key and value pair both as a string. The java.util.Properties class is the subclass of Hashtable.
-
-//Properties can be used to get property value based on the property key. The Properties class provides methods
-//to get data from the properties file and store data into the properties file.
-//Moreover, it can be used to get the properties of a system.
-
-
-//one thread is waiting for driver,but driver is in the wait state that is deadlock condition.To make our execution smooth,and working fine with different threads, we have to
-//implement thread local concepts.thread local not coming from selenium or testng. it is coming from java which claims that if we initialize any reference with the thread local we will 
-//give you the local copy of that particular instance.
-//initialize driver with threadlocal. threadlocal have 2 methods get() and set()
-//set() -> means get the driver value. and get() --> means get the local value of the driver.
-
-//System.getProperty("env"); --> getting the value of the environment.here we have to pass the key
-//if no one passing environment, for Qa team, by default qa is the environment 
-
-//passing the evironment in Testng.xml is bad approach. we have to pass env parameter for every test. that's what maven will help
 
 
 

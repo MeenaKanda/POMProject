@@ -109,9 +109,3 @@ public class AccountsPageTest extends BaseTest{
     
 }
 
-
-//BeforeTest execute first and the BeforeClass execute.
-//if two arraylist are different order to compare both we should use Collection.sort for both array then compare both.
-
-
-//loginpage --> AccountPage --> searchPage --> productInfoPage  ====> this is called page chaining model or zig-zag pattern

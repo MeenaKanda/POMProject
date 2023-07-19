@@ -49,6 +49,3 @@ public class RegisterPageTest extends BaseTest{
 }
 
 
-//Random is a class from java
-//random.nextInt(1000) --> will create number b/w 1 to 1000
-//System.currentTimeMillis() --> will create unique number 

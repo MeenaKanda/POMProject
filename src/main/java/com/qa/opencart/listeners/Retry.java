@@ -26,10 +26,3 @@ public class Retry implements IRetryAnalyzer {
 	
 }
 
-
-//retry(ITestResult iTestResult) -> this method returns try if the test method has to be retried. false otherwise
-
-//which interface is responsible to perform retry analyzer?
-//ans: IRetryAnalyzer
-
-//IRetryAnalyzer -> interface:Interface to implement to be able to have a chance to retry a failed test.

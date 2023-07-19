@@ -81,15 +81,6 @@ public class AccountsPage {
 	}
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }
 
-//TDD(Test Driven Development) --> on the basis of test cases i am deriving my development.
+

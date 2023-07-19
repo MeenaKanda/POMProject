@@ -35,20 +35,20 @@ public class ElementUtil {
 	}
 	
 
-/*	public WebElement getElement(By locator) { // driver.fe we write only once even if we write for 100 by locator.//reusability
-		return driver.findElement(locator);   //call the element without wait
+/*	public WebElement getElement(By locator) { 
+		return driver.findElement(locator);   
 	}*/
 	
 
-	public WebElement getElement(By locator) { // driver.fe we write only once even if we write for 100 by locator.//reusability
-		WebElement element =  driver.findElement(locator);   //call the element without wait
+	public WebElement getElement(By locator) { 
+		WebElement element =  driver.findElement(locator);   
 		if(Boolean.parseBoolean(DriverFactory.highlight)) {
 		jsUtil.flash(element);
 		}
 		return element;
 	}
 	
-	public WebElement getElement(By locator, int timeOut) {  //call the element with wait  //it looks like auto wait in selenium
+	public WebElement getElement(By locator, int timeOut) {  //call the element with wait  
 		return waitForElementVisible(locator, timeOut);
 		
 	}
@@ -57,7 +57,7 @@ public class ElementUtil {
 		return driver.findElements(locator);
 	}
 
-	public void doSendKeys(By locator, String value) { // fe and sendKeys method created only once
+	public void doSendKeys(By locator, String value) { 
 	    WebElement element = getElement(locator);
 	    element.clear();
 		element.sendKeys(value);

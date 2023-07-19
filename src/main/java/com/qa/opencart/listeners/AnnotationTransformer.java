@@ -18,6 +18,3 @@ public class AnnotationTransformer implements IAnnotationTransformer {
 
 }
 
-
-//which Interface is responsible to implement Retry logic?
-//ans: IAnnotationTransformer

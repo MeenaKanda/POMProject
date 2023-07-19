@@ -59,7 +59,3 @@ public class BaseTest {
 	
 }
 
-
-//in prop reference all the properties(8)stored in key value format.
-
-//in the frame work BaseTest running first
